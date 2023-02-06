@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Sirve para que el responsive que creemos se adapte a cualquier pantalla-->
+    <title>Formularios HTML5</title>
+</head>
+<body>
+
+    <h1>Validación</h1>
+    <form>
+        <input type="text" 
+        required 
+        minlength="5"
+        maxlength="15"
+        pattern="[A-Za-z ]+"
+        /> <!--# required significa que el input es obligatorio y que se debe de rellenar obligatoriamente -->
+           <!--# pattern siginifica que solo aceptara dichos patrones en corchetes. Ademas el signo + siginifica que se puedan repetir varias veces-->
+        <input type="number" 
+        required 
+        min="5"
+        max="15"
+        />
+
+        <input type="submit" value="enviar">
+    </form>
+
+    <h1>Formularios</h1>
+    <form> <!-- PARAMETROS method|Porque metodo se quiere enviar la informacion(GET o POST), action|A que enlace se quiere enviar la informacion, enctype|Que tipo de informacion se esta enviando-->
+        <fieldset> <!--Coloca todo dentro de un marco-->
+            
+            <legend>fieldset</legend> <!--Coloca el nombre del marco-->
+            
+            <div>
+                <label for="nombre">Nombre:</label> <!--for|Significa que esta asociado con el input que tiene el id nombre-->
+                <input type="text" name="Nombre" id="nombre" placeholder="Ingrese el nombre" /> <!--El parametro name sirve para que cuando se envie la informacion haciendo click en cualquiera de los botenes(buton O input) creados, se pase por la URL la informacion ingresada por el input. Ejm: file:///C:/Curso-html5/formularios.html?Nombre=ADAWD-->
+            </div>
+
+            <div>
+                <label for="descripcion">Descripcion:</label>
+                <textarea id="descripcion"></textarea>
+            </div>
+
+            <div>
+                Email:
+                <input type="email" />
+            </div>
+
+            <div>
+                Radio:
+                <input type="radio" name="genero" id="hombre" value="hombre" />
+                <label for="hombre">Hombre</label>
+                <input type="radio" name="genero" id="mujer" value="mujer" />
+                <label for="mujer">Mujer</label>
+            </div>
+
+            <div>
+                Select:
+                <select name="genero" id="genero">
+                    <option value="hombre">Hombre</option>
+                    <option value="mujer">Mujer</option>
+                    <option value="otro">Otro</option>
+                </select>
+            </div>
+
+            <div>
+                Checkbox:
+                <label>
+                    <input type="checkbox" /> Mayor de edad
+                </label>
+
+                <label>
+                    <input type="checkbox" /> Menor de edad
+                </label>
+            </div>
+
+            <div>
+                Color:
+                <input type="color" />
+            </div>
+
+            <div>
+                Fecha:
+                <input type="date" />
+            </div>
+
+            <div>
+                Ficheros:
+                <input type="file" />
+            </div>
+
+            <div>
+                Imagen:
+                <input type="image" src="imagenes/tarjeta1.jpg" width="150" height="150"/> <!--Es un boton en forma de una imagen-->
+            </div>
+
+            <div>
+                Oculto:
+                <input type="hidden" name="oculto" value="holaquetalcomoestas" /> <!--hidden sirve para mandar informacion por la URL de manera oculta-->
+            </div>
+
+            <div>
+                Numero:
+                <input type="number" name="numero" />
+            </div>
+
+            <div>
+                Rango:
+                <input type="range" name="rango" />
+            </div>
+
+            <div>
+                Buscar:
+                <input type="search" name="buscar" />
+                <button>Buscar</button>
+            </div>
+
+            <div>
+                Telefono:
+                <input type="tel" name="telefono" />
+            </div>
+
+            <div>
+                Hora:
+                <input type="time" name="hora" />
+            </div>
+
+            <div>
+                Mes:
+                <input type="month" name="mes" />
+            </div>
+
+            <div>
+                URL:
+                <input type="url" name="url" />
+            </div>
+
+            <div>
+                Barra de progresp:
+                <progress min="1" max="100" value="45"></progress>
+            </div>
+            
+            <div>
+                Meter:
+                <meter min="1" max="100" value="45"></meter>
+            </div>
+
+            <div>
+                Lista de datos:
+                <input list="frutas" name="fruta" /> <!--Su identificador es list. Debe tener el mismo nombre del "id" del datalist-->
+                <datalist id="frutas">
+                    <option value="manzana"></option>
+                    <option value="naranja"></option>
+                    <option value="cereza"></option>
+                    <option value="sandia"></option>
+                    <option value="pera"></option>
+                </datalist>
+            </div>
+
+        </fieldset>
+
+        <!--<button type="submit">Enviar</button>--> <!--Boton generico, NO SOLO SIRVE PARA "ENVIAR", SIRVE PARA VARIAS COSAS-->
+        <input type="submit" value="Enviar formulario" /> <!--El boton creado en el input ESTA LIMITADO A SOLO ENVIAR-->
+        <input type="reset" value="Limpiar formulario" /> <!--SIRVE PARA LIMPIAR-->
+
+</body>
+</html>

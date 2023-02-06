@@ -1,0 +1,99 @@
+ /* Para seleccionar todos los elementos de la pagina se utiliza el "*" */
+ /* Lo que se hace aqui es resetear los estilos que viene por defecto */
+*{
+    margin: 0px;
+    padding: 0px;  /* Margen interior */
+}
+
+body{
+    background: lightgray;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*Para seleccionar un elemento con un identificador se coloca el "#" */
+#container{
+   /* width: 70%;*/
+   width: 1100px; /* Ancho */
+   margin: 0px auto; /* Centrar el Div */
+   border: 1px solid black; /* Para marcar bordes */
+}
+
+/* El header hace referencia al header del index */
+header{
+    background-color: red;
+    height: 100px; /* Altura */
+    width: 100%; /* Ancho */
+    text-align: center;  /* Centrar un texto */
+    line-height: 100px; /* Centrar texto verticalmente */
+    color: white; /* Color del texto */
+    border-bottom: 3px dashed black; /* Sirve para poner borde inferior*/
+}
+
+/* La nav hace referencia a la nav del index */
+/* Seleccionar los elementos dentro de la nav: ul li */
+nav{
+    background: lightblue; /* Fondo */
+    height: 50px; /* Altura */
+    border-bottom: 1px solid black; /* Para marcar borde inferior*/
+}
+
+nav ul li{
+    float: left; /* Los elementos se floten a la izquierda */
+    list-style: none; /* Quitar los estilos que vienen por defecto */
+    margin: 10px; /* Para separar los elementos */
+    line-height: 30px; /* Centrar texto verticalmente */
+}
+
+/* Se utiliza el "." para seleccionar la clase */
+.clearfix{
+    clear: both; /* Cuando floto un elemento. Los elementos de abajo queden en su sitio */
+}
+
+/*Para seleccionar un elemento con un identificador se coloca el "#" */
+#content{
+    float: left; /* Los elementos se floten a la izquierda */
+    width: calc(80% - 80px); /* Al 80% le quito 40px del lado izquierdo y otro 40px del lado derecho con la funcion "calc". ESTO DEBIDO A QUE SE PUSO UN PADDING DE 40PX(LO QUE HACE EL PADDIND QUE AUMENTAR EN 40PX TODOS LOS LADOS INTERIORES: 40PX IZQUIERDO, 40PX DERECHO, 40PX SUPERIOR Y 40PX INFERIOR. PARA QUE NO AFECTE AL TAMAÑO ORIGINAL SE LE DESCUENTA 40PX DE UN LADO Y 40PX DEL OTRO = 80PX). */
+    min-height: 500px; /* Altura minima */
+    background: green;
+    padding: 40px;
+}
+
+/* Se utiliza el "." para seleccionar la clase */
+.article{
+    color: white;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+/* Se utiliza el "." para seleccionar la clase */
+.article:first-child{ /* first-child sirve para seleccionar el primer articulo */
+    border-top: 10px;
+    border-top: 1px solid #eee;
+}
+
+/* Se utiliza el "." para seleccionar la clase */
+/* Seleccionar los elementos dentro de la clase article: h2 */
+.article h2{
+    font-size: 25px; /* Cambiar tamaño de la fuente */
+}
+
+/*Es una etiqueta que no tiene "class" ni "id" ni nada, por eso se coloca tal cual */
+aside{
+    float: left; /* Los elementos se floten a la izquierda */
+    width: calc(20% - 20px); /* Al 20% le quito 10px del lado izquierdo y otro 10px del lado derecho con la funcion "calc". ESTO DEBIDO A QUE SE PUSO UN PADDING DE 10PX(LO QUE HACE EL PADDIND QUE AUMENTAR EN 10PX TODOS LOS LADOS INTERIORES: 10PX IZQUIERDO, 10PX DERECHO, 40PX SUPERIOR Y 10PX INFERIOR. PARA QUE NO AFECTE AL TAMAÑO ORIGINAL SE LE DESCUENTA 10PX DE UN LADO Y 10PX DEL OTRO = 20PX). */
+    min-height: 560px; /* Altura minima */
+    background: orange;
+    padding: 10px;
+}
+
+/*Es una etiqueta que no tiene "class" ni "id" ni nada, por eso se coloca tal cual */
+footer{
+    background: black;
+    color: white;
+    text-align: center;
+    height: 50px;
+    line-height: 50px; /*Centrar verticalmente la linea de texto*/
+}
+

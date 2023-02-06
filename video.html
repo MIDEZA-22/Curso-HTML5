@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Video HTML</h1>
+
+    <!--PRIMERA FORMA-->
+    <p>
+    <video src="video/lenguado.mp4" width="400" height="400" controls autoplay muted> <!--controls | Para tener los controles del video(play, stop, sonido, etc), autoplay | Para que se reprodusca automaticamente y muted | Para que al inicie en silencio-->
+        Tu navegador no soporta la etiqueta video
+    </video>
+    </p>
+
+    <!--SEGUNDA FORMA-->
+    <p>
+    <video controls  width="400" height="400" poster="imagenes/tarjeta.jpg">
+        <source src="video/lenguado.mp4" type="video/mp4"/> <!--La etiqueta "source" permite indicar un "src"-->
+    </video>
+    </p>
+</body>
+</html>
